@@ -6,6 +6,7 @@ const jsonParser = bodyParser.json()
 const {BlogPosts} = require('./models')
 
 BlogPosts.create('Learning Node', 'Learning node is an excellent adventure', 'Michelle Manzo')
+BlogPosts.create('I should go to bed.', 'There is zero chance I should still be up working, but insomnia is what it is! At least I can say I was productive.', 'Michelle Manzo')
 
 router.get('/', (req, res) => {
   res.json(BlogPosts.get())
@@ -28,13 +29,6 @@ router.post('/', jsonParser, (req, res) => {
 
 
 router.delete('/:id', (req, res) => {
-	if (req.params.id !== req.body.id) {
-    const message = (
-      `Request path id (${req.params.id}) and request body id `
-      `(${req.body.id}) must match`)
-    console.error(message)
-    return res.status(400).send(message)
-  }
 	BlogPosts.delete(req.params.id)
 	console.log(`Deleted blog post \`${req.params.ID}\``)
   	res.status(204).end()
