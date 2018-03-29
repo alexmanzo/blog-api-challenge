@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:app: pure-gorge-54930
+  provider: heroku
+  api_key:
+    secure: Jjat8HyJB5v8bU8cR+s9iFDMoiQmEmCVeMPJ+d4X8iAZYt+xhJfMoSraY9r40wFUnrjQtM5M/aZTuWgnO62cgMRAtCdlTC3NbDFjPOcoKV4UqUXI9gdmOU6mi/kT1HjDYZkY7MYHA3zFmrJ+MsAUm8GTbl9y9WSxiLCRxzHfL71Bf69musg2J38Hho88mGWzENEZEGzCeZQfZ67daKn0gwbJJeqLl5nqXRipytA/ZgZwuRCi27PT3xwmpwsKw+MzXgl1wQlefQvLrWc8a2BlkyE7SAiN2Npp4cpQqxVna+cIEtVQvUu11YfFrVVbN5karUNrOsKJ/BNyFKHMpZb4ld4serGIXyO4lYmtRoOYRBSeZzlk0oCChFIu1jgLrNDN1lzIjmzxMe5yltnBHzxYZvx5k7t4prqVVQhDvSVuspFsaAlBzKx6rI9SKjN0UrUb5Bk1yhevpELXSRv7kNzX0ZZFE7ru3MEXQxIczcGb6y55uH1ZcFBHeElF+AksE0oSOWDl7cwrmAuq25zfBVYkF/n5smPo+Lux0hoyomfNTs0la/7hD+YKWBE/S6Ve8CBbPT6k2YNLKI8poO4Wlf5vGV+2qo6KRX9YpHZqNYyOiVQQ3enKQTMRR2SwqT6NbAP2U4/ibwHtwEwFv8/LfQ/7/fc7UK+CdX4HYB4vtzCIiVY=
+  app: sleepy-ravine-67146
+  on:
+    repo: michellemcodes/blog-api-challenge
