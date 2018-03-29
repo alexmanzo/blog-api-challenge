@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:app: sleepy-ravine-67146
+  provider: heroku
+  api_key:
+    secure: RlH13Zxk/cUL6GGZzRakEcYZ5ZhE5GDvKnQHRYbZU3h6lkYr1uMA9EblkhNJA2Xd/CoL+wNCwrtgg1+b2b1ty49kzTOsvXHjdtt4DLHgVzBw78dRM48nC9IZxc9SQmAn8i0cOrVsgmstNi0Mhu+eOdR+cficGNinj2L+Edt9KBl9lOCkmLsQ4syqsUJ8vwmRaiOazjKGCo/xAoPMH+uA1/bQFbN65hvu8F12WSdS8yDYPH5l+u6g3x6uLWiCgiXZpi29KJeJcFONXtP7JM9F6pmAvs1T5EDTdhJLlKpV0vUJWpMogRjKCvOn4PNVw0Wg4eI5ku3lev/zMcbObic7aV+Hdr0yMhR9ZQfjJKQhQS0abRBPnKI+Zkdapn5laDi8h09mt8P58tlVWNu+DjvOet4qCP+FNfK3hL0VU65yfeZKn1xVpPrdqCfW/EO8+F4+E2G+LO+Rz2ToRoYr3WFvKaDvXjSoJRflx99u6qqlnJOclzsDU2LnzaaYkMWb5dMZeynMDYFsrX9bBg0E/6sCEchBBmqbr7XK5QHv3B07NpjNdFvwDic/yt9K2KlhjgBz+cpEVuO+cgcUKHvb8pkRHatGQfD2lUHSAFT9DaDs7S8JbLZ5goj/rmtjEyY6/QS/n44ONbFyJtlCFbEFDba+owtth3SfV+q3tHANLQJtd2E=
+  app: blog-api-challenge
+  on:
+    repo: michellemcodes/blog-api-challenge
