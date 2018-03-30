@@ -19,7 +19,7 @@ describe('Blog Post', function() {
 
   it('should list items on GET', function() {
     return chai.request(app)
-      .get('/blog-posts')
+      .get('/posts')
       .then(function(res) {
         expect(res).to.have.status(200);
         expect(res).to.be.json;
