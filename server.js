@@ -17,20 +17,21 @@ app.use('/posts', BlogPostsRouter)
 let server;
 
 function runServer(databaseUrl, port = PORT) {
-  mongoose.connect(databaseUrl, err => {
-    if (err) {
-      return reject(err)
-    }
-  })
-  server = app.listen(port, () => {
-    console.log(`Your app is listening on port ${port}`)
-    resolve()
-  })
-  .on('error', err => {
-    if (err) {
-      mongoose.disconnect()
-      reject(err)
-    }
+
+  return new Promise((resolve, reject) => {
+    mongoose.connect(databaseUrl, err => {
+      if (err) {
+        return reject(err)
+      }
+      server = app.listen(port, () => {
+        console.log(`Your app is listening on port ${port}`)
+        resolve();
+      })
+        .on('error', err => {
+          mongoose.disconnect()
+          reject(err)
+        })
+    })
   })
 }
 
@@ -49,6 +50,8 @@ function closeServer() {
 }
 
 if (require.main === module) {
+  console.log(DATABASE_URL)
+  console.log(PORT)
   runServer(DATABASE_URL).catch(err => console.error(err));
 }
 

@@ -6,6 +6,7 @@ function StorageException(message) {
 }
 
 const blogPostSchema = mongoose.Schema({
+  id: {type: String},
   title: {type: String, required: true},
   content: {type: String, required: true},
   author: {
@@ -20,8 +21,10 @@ blogPostSchema.virtual('authorString').get(function() {
 })
 
 
+
 blogPostSchema.methods.serialize = function() {
   return {
+    id: this._id,
     title: this.title,
     content: this.content,
     author: this.authorString,
@@ -32,4 +35,4 @@ blogPostSchema.methods.serialize = function() {
 
 const BlogPost = mongoose.model('BlogPost', blogPostSchema)
 
-module.exports = {BlogPost};
+module.exports = {BlogPost}
