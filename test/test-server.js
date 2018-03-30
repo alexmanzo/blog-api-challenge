@@ -61,7 +61,6 @@ describe('Blog Post', function() {
       "title": "foo",
       "content": "foobar foobar foobar",
       "author": "Foo Barringer",
-      "publishDate": 1522352602462
     };
 
     return chai.request(app)

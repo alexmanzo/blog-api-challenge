@@ -9,8 +9,6 @@ app.use(morgan('common'))
 
 app.use('/blog-posts', BlogPostsRouter)
 
-
-
 let server;
 
 function runServer() {
